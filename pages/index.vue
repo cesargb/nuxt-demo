@@ -11,6 +11,9 @@
       <li>
         <a href="/news/nuxt">Nuxt</a>
       </li>
+      <li>
+        <a href="/news/aws">AWS</a>
+      </li>
     </ul>
   </div>
 </template>
