@@ -19,8 +19,8 @@
 export default {
   name: 'NewsIndex',
 
-  async asyncData({ $axios, params }) {
-    const { data } = await $axios.get(`https://newsapi.org/v2/everything?q=${params.q}&apiKey=${ process.env.NEWS_API_KEY}`)
+  async asyncData({ $axios, params, $config }) {
+    const { data } = await $axios.get(`https://newsapi.org/v2/everything?q=${params.q}&apiKey=${$config.newsApiKey}`)
     return {
       news: data.articles
     }
