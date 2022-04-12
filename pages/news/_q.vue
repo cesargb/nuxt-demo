@@ -27,6 +27,10 @@ export default {
       q: params.q
     }
   },
+
+  head:{
+    title: `Noticias de ${this.q}`
+  },
 }
 </script>
 
