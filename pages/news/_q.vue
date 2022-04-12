@@ -1,5 +1,6 @@
 <template>
   <div class="grid">
+    <h1>Noticias: {{ q }}</h1>
     <div v-for="(n, index) in news" :key="index" class="item">
       <div class="image">
         <img :src="n.urlToImage" alt="">
@@ -22,7 +23,8 @@ export default {
   async asyncData({ $axios, params, $config }) {
     const { data } = await $axios.get(`https://newsapi.org/v2/everything?q=${params.q}&apiKey=${$config.newsApiKey}`)
     return {
-      news: data.articles
+      news: data.articles,
+      q: params.q
     }
   },
 }
